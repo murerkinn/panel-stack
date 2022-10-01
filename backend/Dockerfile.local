@@ -1,0 +1,25 @@
+FROM node:16-alpine3.11
+
+RUN apk add g++ make python
+
+RUN apk --no-cache add --virtual \
+  builds-deps \
+  build-base \
+  python
+
+RUN apk add --update alpine-sdk && \
+    apk add libffi-dev openssl-dev && \
+    apk add python-dev python3-dev
+
+WORKDIR /app
+
+ADD ./package.json ./
+ADD ./package-lock.json ./
+ADD ./tsconfig.json ./
+ADD ./nodemon.json ./
+
+RUN npm i
+
+RUN npm rebuild bcrypt --build-from-source
+
+CMD [ "npm", "run", "dev" ]
