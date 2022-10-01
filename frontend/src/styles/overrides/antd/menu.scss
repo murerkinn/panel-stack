@@ -1,0 +1,36 @@
+.ant-menu {
+  &-dark {
+    background: transparent !important;
+  }
+}
+
+.ant-menu.ant-menu-inline-collapsed > .ant-menu-item,
+.ant-menu.ant-menu-inline-collapsed
+  > .ant-menu-item-group
+  > .ant-menu-item-group-list
+  > .ant-menu-item,
+.ant-menu.ant-menu-inline-collapsed
+  > .ant-menu-item-group
+  > .ant-menu-item-group-list
+  > .ant-menu-submenu
+  > .ant-menu-submenu-title,
+.ant-menu.ant-menu-inline-collapsed
+  > .ant-menu-submenu
+  > .ant-menu-submenu-title {
+  padding: 0 2.8rem;
+}
+
+.ant-menu-inline-collapsed {
+  .ant-menu-item,
+  .ant-menu-item .ant-menu-item-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .ant-menu-item .ant-menu-item-icon {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 2.4rem;
+  }
+}

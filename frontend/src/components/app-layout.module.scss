@@ -1,0 +1,14 @@
+.appLayout {
+  min-height: 100vh;
+
+  &Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    .logoutButton {
+      margin-left: auto;
+    }
+  }
+}

@@ -1,7 +1,10 @@
 import 'antd/dist/antd.variable.min.css'
+import '@/styles/index.scss'
 
 import type { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
+
+import AppLayout from '@/components/app-layout'
 
 const AntConfigProvider = dynamic(
   () => import('@/components/ant-config-provider'),
@@ -11,7 +14,9 @@ const AntConfigProvider = dynamic(
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AntConfigProvider>
-      <Component {...pageProps} />
+      <AppLayout>
+        <Component {...pageProps} />
+      </AppLayout>
     </AntConfigProvider>
   )
 }

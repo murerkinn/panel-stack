@@ -1,0 +1,23 @@
+.ant-btn {
+  border-radius: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  &-icon-only {
+    svg {
+      font-size: 2rem;
+    }
+  }
+
+  &-group {
+    .ant-btn:first-of-type {
+      border-radius: 0.4rem 0 0 0.4rem !important;
+    }
+
+    .ant-btn:last-of-type {
+      border-radius: 0 0.4rem 0.4rem 0 !important;
+    }
+  }
+}
