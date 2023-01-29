@@ -1,17 +1,23 @@
 import { ConfigProvider } from 'antd'
 import { ConfigProviderProps } from 'antd/lib/config-provider'
 
-ConfigProvider.config({
-  theme: {
-    primaryColor: '#6D5AE6',
-    errorColor: '#FC7063',
-    warningColor: '#FFC668',
-    successColor: '#98EE5D',
-  },
-})
-
 const AntConfigProvider = ({ children, ...rest }: ConfigProviderProps) => {
-  return <ConfigProvider {...rest}>{children}</ConfigProvider>
+  return (
+    <ConfigProvider
+      {...rest}
+      theme={{
+        token: {
+          colorPrimary: '#6D5AE6',
+          colorError: '#FC7063',
+          colorWarning: '#FFC668',
+          colorSuccess: '#98EE5D',
+          colorLink: '#6D5AE6',
+        },
+      }}
+    >
+      {children}
+    </ConfigProvider>
+  )
 }
 
 export default AntConfigProvider

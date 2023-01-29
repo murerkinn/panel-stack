@@ -3,20 +3,25 @@
 }
 
 .ant-layout {
-  &-has-sider {
+  .ant-layout-has-sider {
     height: 100%;
   }
 
-  &-sider {
+  .ant-layout-sider {
     background: #191632;
   }
 
-  &-header {
+  .ant-layout-header {
     height: 6.4rem;
     background: white;
+    padding-inline: 2rem;
   }
 
-  &-content {
+  .ant-layout-footer {
+    background-color: white;
+  }
+
+  .ant-layout-content {
     padding: 2rem;
 
     @media screen and (max-width: 768px) {

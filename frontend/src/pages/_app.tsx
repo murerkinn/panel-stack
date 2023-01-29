@@ -1,4 +1,3 @@
-import 'antd/dist/antd.variable.min.css'
 import '@/styles/index.scss'
 
 import type { AppProps } from 'next/app'
